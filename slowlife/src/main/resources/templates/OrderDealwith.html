@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单处理</title>
+    <script src="jQuery/jquery-3.3.1.min.js"></script>
+    <script src="js/OrderDealwith.js"></script>
+</head>
+<body>
+<div>
+    <!--商家信息-->
+    <div>
+        <a href="">
+            <span><img src="" alt="商家图片"></span>
+            <span>商家名称</span>
+        </a>
+    </div>
+
+</div>
+<div style="text-align: center">
+    <!--头部菜单: 销量查询、员工管理、商品发布、订单处理、客服接待、商品管理、财务查询-->
+    <span>
+        <a href="MerchentPerson.html">查询</a>
+    </span>
+    <span>
+        <a href="EmployeeManagement.html">员工管理</a>
+    </span>
+    <span>
+        <a href="CommodityRelease.html">商品发布</a>
+    </span>
+    <span>
+        <a href="CommodityManagement.html">商品管理</a>
+    </span>
+    <span>
+        <a href="OrderDealwith.html">订单处理</a>
+    </span>
+    <span>
+        <a href="CustomerServiceReception.html">客服接待</a>
+    </span>
+    <span>
+        <a href="FinancialManagement.html">财务管理</a>
+    </span>
+</div>
+<div>
+    <div>
+        <span>
+            <input type="text" id="OrderNumber" placeholder="订单检索">
+        </span>
+        <span>
+            <button onclick="Get()">检索</button>
+        </span>
+    </div>
+    <span>
+        <button onclick="OrderDW()">订单处理</button>
+    </span>
+    <span>
+        <button onclick="ReturnGoods()">退货申请</button>
+    </span>
+</div>
+<hr size="3" id="line">
+<div id="show">
+    <div id="dealwithnumber">
+        <!--订单处理单例-->订单处理单例
+        <div>
+            订单编号；<span>编号</span>
+        </div>
+        <div>
+            用户编号：<span>用户</span>
+        </div>
+        <div>
+            商品编号：<span>商品</span>
+        </div>
+        <div>
+            商品名称：<span>名称</span>
+        </div>
+        <div>
+            商品单价：<span>单价</span>
+        </div>
+        <div>
+            商品数量：<span>数量</span>
+        </div>
+        <div>
+            付款金额：<span>金额</span>
+        </div>
+        <div>
+            <button onclick="OrderChange('number')">订单处理</button>
+        </div>
+    </div>
+    <div id="returnnumber">
+        <!--退货处理单例-->退货处理单例
+        <div>
+            订单编号：<span>编号</span>
+        </div>
+        <div>
+            用户编号：<span>用户</span>
+        </div>
+        <div>
+            商品编号：<span>商品</span>
+        </div>
+        <div>
+            商品单价：<span>单价</span>
+        </div>
+        <div>
+            商品数量：<span>数量</span>
+        </div>
+        <div>
+            退货说明：<span>说明</span>
+        </div>
+        <div>
+            <button onclick="ReturnGoodChang()">退货通过并退款</button>
+        </div>
+    </div>
+    <div>
+        <!--订单检索显示单例-->订单检索显示单例
+        <div>
+            订单编号：<span>编号</span>
+        </div>
+        <div>
+            用户编号：<span>用户</span>
+        </div>
+        <div>
+            商品编号：<span>商品</span>
+        </div>
+        <div>
+            商品名称：<span>名称</span>
+        </div>
+        <div>
+            商品数量：<span>数量</span>
+        </div>
+        <div>
+            商品单价：<span>单价</span>
+        </div>
+        <div>
+            支付金额：<span>金额</span>
+        </div>
+        <div>
+            订单状态：<span>状态</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

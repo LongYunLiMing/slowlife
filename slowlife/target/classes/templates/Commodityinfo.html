@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品展示</title>
+    <script src="jQuery/jquery-3.3.1.min.js"></script>
+    <script src="js/Commodityinfo.js"></script>
+</head>
+<body>
+<div>
+    <!--商品基本信息-->
+    <div class="picture">
+        <img src="" alt="商品封面图片">
+    </div>
+    <div class="info">
+        <div id="name">商品名称</div>
+        <div id="price">价格：￥</div>
+        <div id="count"></div>
+        <div id="time"></div>
+        <div>数量：
+            <a onclick="jian()">-</a>
+            <input type="text" id="quantity" value="1" style="width: 20px">
+            <a onclick="jia()">+</a>
+        </div>
+        <div>
+            <div onclick="FirstGet()" style="display: inline-block">立即购买</div>
+            <div onclick="AddShoppingCart()" style="display: inline-block">加入购物车</div>
+        </div>
+    </div>
+</div>
+<hr size="5">
+<div>
+    <div style="display: inline-block"><a id="detailInfo" href="CommodityDetailInfo.html" target="content">详情</a> </div>
+    <div style="display: inline-block"><a id="comment" href="CommodityComment.html" target="content">评论</a> </div>
+</div>
+<iframe id="iframe" name="content" src="CommodityDetailInfo.html" style="width: 100%;height: 100%;"></iframe>
+</body>
+</html>

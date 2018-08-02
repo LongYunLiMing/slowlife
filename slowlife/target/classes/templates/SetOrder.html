@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单填写</title>
+    <style>
+        .info{
+            display: inline-block;
+        }
+        .picture{
+            display: inline-block;
+        }
+        .inlne{
+            display: inline-block;
+        }
+    </style>
+
+    <script src="jQuery/jquery-3.3.1.min.js"></script>
+    <script src="js/SetOrder.js"></script>
+
+</head>
+<body>
+<div id="show">
+    <!--订单显示区域-->
+    <div>
+        <!--单个订单区域-->
+        <div>
+            <!--商家名称-->
+            <span>
+                <img src="" alt="商家头像">
+            </span>
+            <span>
+                <a href="Merchentinfo.html?id=merchentid">商家名称</a>
+            </span>
+        </div>
+        <div>
+            <!--商品信息-->
+            <div class="picture">
+                <!--商品图片-->
+                <a href="Commodityinfo.html?id=commodityid"><img src="" alt="商品图片"></a>
+            </div>
+            <div class="info">
+                <span><a href="Commodityinfo.html?id=commodityid">商品名称</a> </span>
+                <span>商品单价￥</span>
+                <span>购买数量</span>
+            </div>
+        </div>
+        <span>实付款金额</span>
+    </div>
+    <div>
+        <button onclick="addressShow()">选择地址</button>
+        <div id="address" style="display: none">
+            <!--地址选择区-->
+            <div>
+                <!--单个地址显示-->
+                <div class="info">
+                    <input type="radio" name="address" checked="checked" value="1">
+                </div>
+                <div class="inlne">
+                    <div>address:</div>
+                    <div>phone:</div>
+                </div>
+            </div>
+
+            <div>
+                <!--单个地址显示-->
+                <div class="info">
+                    <input type="radio" name="address" value="2">
+                </div>
+                <div class="inlne">
+                    <div>address:</div>
+                    <div>phone:</div>
+                </div>
+            </div>
+            <button onclick="addressYes()">确定</button>
+        </div>
+    </div>
+    <div>
+        <button onclick="sendOrder()">提交订单（￥）</button>
+    </div>
+</div>
+</body>
+</html>

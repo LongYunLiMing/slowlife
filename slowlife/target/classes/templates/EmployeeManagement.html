@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>员工管理</title>
+    <script src="jQuery/jquery-3.3.1.min.js"></script>
+    <script src="js/EmplyeeManagement.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+<div>
+    <!--商家信息-->
+    <div>
+        <a href="">
+            <span><img src="" alt="商家图片"></span>
+            <span>商家名称</span>
+        </a>
+    </div>
+
+</div>
+<div style="text-align: center">
+    <!--头部菜单: 销量查询、员工管理、商品发布、订单处理、客服接待、商品管理、财务查询-->
+    <span class="line">
+        <a href="MerchentPerson.html">查询</a>
+    </span>
+    <span class="line">
+        <a href="EmployeeManagement.html">员工管理</a>
+    </span>
+    <span class="line">
+        <a href="CommodityRelease.html">商品发布</a>
+    </span>
+    <span class="line">
+        <a href="CommodityManagement.html">商品管理</a>
+    </span>
+    <span class="line">
+        <a href="OrderDealwith.html">订单处理</a>
+    </span>
+    <span class="line">
+        <a href="CustomerServiceReception.html">客服接待</a>
+    </span>
+    <span class="line">
+        <a href="FinancialManagement.html">财务管理</a>
+    </span>
+</div>
+<hr size="5">
+<div>
+    <!--添加员工-->
+    <div>
+        <button onclick="AddEmployeeshow()">添加员工</button>
+    </div>
+    <div id="AddShow" style="display: none">
+        <div>
+            <input id="name" type="text" placeholder="姓名">
+        </div>
+        <div id="permission">
+            权限：
+            <input type="checkbox" name="permission" value="客服接待" checked="checked">客服接待
+            <input type="checkbox" name="permission" value="商品发布">商品发布
+            <input type="checkbox" name="permission" value="商品管理">商品管理
+            <input type="checkbox" name="permission" value="订单处理">订单处理
+            <input type="checkbox" name="permission" value="员工管理">员工管理
+            <input type="checkbox" name="permission" value="财务管理">财务管理
+        </div>
+        <div>
+            <input type="text" id="phone" placeholder="联系方式">
+        </div>
+        <div id="sex">
+            <input type="radio" name="sex" value="man" checked="checked">男
+            <input type="radio" name="sex" value="woman">女
+        </div>
+        <div>
+            <button onclick="AddEmployee()">添加</button>
+        </div>
+    </div>
+    <hr size="3">
+    <div>
+        <!--已有员工显示-->
+        <div>
+            <!--单个员工-->
+            <div>员工姓名：姓名</div>
+            <div>员工编号：编号</div>
+            <div>员工性别：男</div>
+            <div>
+                <span>员工权限：权限</span>
+                <span><button onclick="permissionUpdataShow('number')">修改</button></span>
+            </div>
+            <div id="permissionUpdatanumber" style="display: none">
+                <div id="checkboxnumber">
+                    <input type="checkbox" value="客服接待" checked="checked">客服接待
+                    <input type="checkbox" value="商品发布">商品发布
+                    <input type="checkbox" value="商品管理">商品管理
+                    <input type="checkbox" value="订单处理">订单处理
+                    <input type="checkbox" value="员工管理">员工管理
+                    <input type="checkbox" value="财务管理">财务管理
+                </div>
+                <div>
+                    <button onclick="permissionUpdata('number')">修改</button>
+                </div>
+            </div>
+            <div>
+                <span>联系方式：电话号码</span>
+                <span><button onclick="updataShow('number')">修改</button></span>
+            </div>
+            <div id="phoneUpdatanumber" style="display: none">
+                <input type="text" id="phoneInputnumber">
+                <button onclick="updata('number')">修改</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

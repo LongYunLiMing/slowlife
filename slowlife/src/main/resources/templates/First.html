@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<style type="text/css">
+    .top{
+        background-color: blue;
+        width: 100%;
+        height: 20%;
+    }
+    .search_input{
+        align-self: center;
+    }
+    .middle{
+        background-color: white;
+        width: 100%;
+        height: 40%
+    }
+    .type{
+        display: inline-block;
+
+    }
+    .lower{
+        background-color: red;
+        height: 40%;
+        width: 100%;
+    }
+    .MerchentPicture{
+        display: inline-block;
+    }
+    .MerchentInfo{
+        display: inline-block;
+    }
+    .show{
+        width: 100%;
+        height: 500px;
+        background-color: blue;
+    }
+    .navigation{
+        width: 100%;
+        height: 15%;
+        background-color: yellow;
+    }
+    .menu{
+        display: inline-block;
+        height: 100%;
+        width: 33%
+    }
+    .frame{
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<script src="jQuery/jquery-3.3.1.min.js"></script>
+<script src="js/First.js"></script>
+<body>
+
+<div style="height: 85%;width: 100%;">
+
+    <!-- 用于搜索框和搜索图标的显示，搜索框没有提交按钮回车自动提交 -->
+    <!-- 上部主要是搜索框，以后可以在搜索框上部加上定位结果，类似饿了么的首页 -->
+    <div class="top">
+        <input type="text" name="keyword" class="search_input" placeholder="输入关键字试试吧！">
+        <button onclick="Get()">搜索</button>
+        <hr size="3">
+    </div>
+
+
+    <!-- 中上部暂时设计为分类界面的直达入口 -->
+    <div class="middle">
+        <span>--商品分类--</span><br>
+        <!-- 分类在商品上传过程中会有系统提供类别由商家选择归类，因此类别是固定的 -->
+        <span class="type">
+			<a href="CommodityShow.html?T=蔬菜"><img alt="蔬菜" src=""></a><br>
+
+		</span>
+        <span class="type">
+			<a href="CommodityShow.html?T=fruit"><img alt="水果" src=""></a><br>
+
+		</span>
+        <span class="type">
+			<a href="CommodityShow.html?T=肉类"><img alt="肉类" src=""></a><br>
+
+		</span>
+    </div>
+
+
+    <!-- 中下部设计为商家推送 -->
+    <div class="lower">
+        <span>--商家推荐--</span>
+        <hr id="merchent" size="5">
+
+        <!-- 演示布局，为方便提前设计css样式，特意设置了演示商家信息显示布 -->
+        <!-- 等与后台文件获取到数据后，该处的布局文件将动态添加，但css样式和演示布局内的相同 -->
+        <div class="Merchent">
+			<span class="MerchentPicture">
+			<!-- 本span标签用于显示商家图片，将于商家信息并行 -->
+			<img alt="商家图片1" src="">
+			</span>
+            <div class="MerchentInfo">
+                <!-- 本span标签用于显示商家信息 -->
+                <span>商家昵称1</span><br>
+                <span>商品数量1</span>
+            </div>
+            <hr size="2">
+        </div>
+
+        <div class="Merchent">
+			<span class="MerchentPicture">
+			<!-- 本span标签用于显示商家图片，将于商家信息并行 -->
+			<img alt="商家图片2" src="">
+			</span>
+            <div class="MerchentInfo">
+                <!-- 本span标签用于显示商家信息 -->
+                <span>商家昵称2</span><br>
+                <span>商品数量2</span>
+            </div>
+            <hr size="2">
+        </div>
+    </div>
+
+
+</div>
+
+<!-- 下部是固定的导航栏，但导航栏的定义不在该文件，该文件是被导航栏引用然后显示在导航文件中的 -->
+<!-- 导航栏所处区域 ,本文件唯一需要设计css的地方-->
+<div class="navigation">
+		<span class="menu">
+			<a href="First.html"><img alt="首页" src=""> </a>
+		</span>
+    <span class="menu">
+			<a href="ShoppingCart.html"> <img alt="购物车" src="" > </a>
+		</span>
+    <span class="menu">
+			<a href="Person.html"> <img alt="个人主页" src=""> </a>
+		</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品浏览区</title>
+    <style>
+        .line{
+            display: inline-block;
+        }
+    </style>
+    <script src="jQuery/jquery-3.3.1.min.js"></script>
+    <script src="js/CommodityShow.js"></script>
+</head>
+<body>
+<div>
+    <！--头部检索区-->
+    <div>
+        <input type="text">
+        <button onclick="Get()">搜索</button>
+    </div>
+    <hr size="5">
+    <div>
+        <!--中部附加条件选择区-->
+
+    </div>
+    <hr id="showline" size="3">
+    <div id="show">
+        <!--底部商品显示区-->
+        <div>
+            <!--单个商品显示区-->
+            <div class="line">
+                <!--商品图片显示-->
+                <a href="Commodityinfo.html?id=122"><img src="" alt="商品图片"></a>
+            </div>
+            <div class="line">
+                <!--商品基本信息-->
+                <div><a href="Commodityinfo.html?id=122">商品名称</a></div>
+                <div>商品单价</div>
+                <div>商品上架时间</div>
+            </div>
+            <hr size="2">
+        </div>
+    </div>
+</div>
+</body>
+</html>

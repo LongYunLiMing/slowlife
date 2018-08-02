@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商家信息</title>
+    <style>
+        .CommodityPicture{
+            display: inline-block;
+        }
+        .Commodityinfo{
+            display: inline-block;
+        }
+        .price{
+            display: inline-block;
+        }
+        .quantity{
+            display: inline-block;
+        }
+    </style>
+    <script src="jQuery/jquery-3.3.1.min.js"></script>
+    <script src="js/Merchentinfo.js"></script>
+</head>
+<body>
+<div style="text-align: center;">
+    <span style="display: inline-block;"><img id="MerchentPicture" class="picture" alt="还没上传图片呢！" src=""></span>
+    <div style="display: inline-block;">
+        <div id="MerchentName">商家名称</div>
+        <div id="CommodityQuantity">商品总量</div>
+    </div>
+</div>
+<hr size="5" width="100%">
+<!--商家商品展示区-->
+<div id="Commodity">
+    <!--单个商品展示区 商品编号、商品图片、商品名称、商品单价、销售量-->
+    <div>
+        <a href="Commodityinfo.html?id=Commodityid">
+            <div class="CommodityPicture">
+                <!--商品图片-->
+                <img src="" alt="商品图片">
+            </div>
+            <div class="Commodityinfo">
+                <!--商品基本信息-->
+                <div>商品名称</div>
+                <div>
+                    <div class="price">商品单价</div>
+                    <div class="quantity">销售量</div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+</body>
+</html>

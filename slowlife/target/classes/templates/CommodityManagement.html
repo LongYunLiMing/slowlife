@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品管理</title>
+    <script src="jQuery/jquery-3.3.1.min.js"></script>
+    <script src="js/CommodityRelease.js"></script>
+    <script src="js/CommodityManagement.js"></script>
+</head>
+<body>
+<div>
+    <!--商家信息-->
+    <div>
+        <a href="">
+            <span><img src="" alt="商家图片"></span>
+            <span>商家名称</span>
+        </a>
+    </div>
+
+</div>
+<div style="text-align: center">
+    <!--头部菜单: 销量查询、员工管理、商品发布、订单处理、客服接待、商品管理、财务查询-->
+    <span class="line">
+        <a href="MerchentPerson.html">查询</a>
+    </span>
+    <span class="line">
+        <a href="EmployeeManagement.html">员工管理</a>
+    </span>
+    <span class="line">
+        <a href="CommodityRelease.html">商品发布</a>
+    </span>
+    <span class="line">
+        <a href="CommodityManagement.html">商品管理</a>
+    </span>
+    <span class="line">
+        <a href="OrderDealwith.html">订单处理</a>
+    </span>
+    <span class="line">
+        <a href="CustomerServiceReception.html">客服接待</a>
+    </span>
+    <span class="line">
+        <a href="FinancialManagement.html">财务管理</a>
+    </span>
+</div>
+<div>
+    <!--检索区-->
+    <span>
+        <input id="number" type="text" placeholder="商品编号">
+    </span>
+    <span>
+        <button onclick="GetNumber()">搜索</button>
+    </span>
+</div>
+<div>
+    <!--商品显示区-->
+    <div>
+        <div>
+            <span>商品名称：</span>
+            <span><input type="text" value="苹果" id="name"></span>
+            <span><button onclick="updataName('number')">修改名称</button></span>
+        </div>
+        <div>
+            <span>商品单价：</span>
+            <span>
+                <input id="price" type="text" value="520">
+            </span>
+            <span>
+                <button onclick="updataPrice('number')">修改单价</button>
+            </span>
+        </div>
+        <div>
+            <span>商品库存：</span>
+            <span>
+                <input type="text" id="inventory" value="5000">
+            </span>
+            <span>
+                <button onclick="updataInventory('number')"></button>
+            </span>
+        </div>
+        <div>
+            <span>
+                <img id="pictureShow" src="" alt="商品图片">
+            </span>
+            <div>
+                <span>
+                    <input type="file" id="pictureM">
+                </span>
+                <span>
+                    <button onclick="updataPicture('number')">重传图片</button>
+                </span>
+            </div>
+        </div>
+        <hr size="3" id="line">
+        <div id="DesignShow">
+            <!--商品详细设计显示和修改区-->
+            商品详细显示和修改区域
+        </div>
+        <div>
+            <button onclick="Design('number')">重新设计详情页面</button>
+        </div>
+        <div>
+            <button onclick="Delete()">下架该商品</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

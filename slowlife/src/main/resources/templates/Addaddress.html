@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加收货地址</title>
+    <style type="text/css">
+        .one{
+
+            display: inline-block;
+        }
+        .two{
+            display: inline-block;
+        }
+        .update{
+            display: none;
+        }
+    </style>
+    <script src="jQuery/jquery-3.3.1.min.js"></script>
+    <script src="js/Addaddress.js"></script>
+</head>
+<body>
+<body>
+<div style="width: 100%" id="show">
+    <!-- 显示已有的所有地址记录 -->
+        <!-- 单个地址显示区 -->
+        <div id="delete1">
+            <div id="1show">
+                <!-- 显示区 -->
+                <div id="addressShow1">地址：</div>
+                <div id="phoneShow1">电话：</div>
+                <div class="two"><button onclick="updataShow(1)">修改</button></div>
+                <div class="two"><button onclick="deleteAddress(1)">删除</button></div>
+            </div>
+            <div id="1updata" style="display: none;">
+                <!-- 修改区 -->
+                <input id="addressinput1" type="text" placeholder="请输入修改地址"><br>
+                <input id="phoneinput1" type="text" placeholder="请输入修改电话"><br>
+                <button onclick="updata(1)">修改</button>
+            </div>
+            <hr size="3">
+        </div>
+
+        <div id="delete2">
+            <div id="2show">
+                <!-- 显示区 -->
+                <div id="addressShow2">地址：</div>
+                <div id="phoneShow2">电话：</div>
+                <div class="two"><button onclick="updataShow(2)">修改</button></div>
+                <div class="two"><button onclick="deleteAddress(2)">删除</button></div>
+            </div>
+            <div id="2updata" style="display: none;">
+                <!-- 修改区 -->
+                <input id="addressinput2" type="text" placeholder="请输入修改地址"><br>
+                <input id="phoneinput2" type="text" placeholder="请输入修改电话"><br>
+                <button onclick="updata(2)">修改</button>
+            </div>
+            <hr size="3">
+        </div>
+
+</div>
+<hr size="5">
+<div>
+    <!-- 添加地址区域 -->
+    <input type="text" id="address"><br>
+    <input type="text" id="phone"><br>
+    <button id="addAddress" onclick="addAddress()">添加</button>
+</div>
+
+</body>
+</body>
+</html>

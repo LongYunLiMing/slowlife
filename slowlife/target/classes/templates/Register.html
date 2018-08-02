@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <style>
+
+    </style>
+    <script src="jQuery/jquery-3.3.1.min.js"></script>
+    <script src="js/Register.js"></script>
+</head>
+<body>
+<div>
+    <div>
+        <input id="userId" type="text" placeholder="手机号/邮箱" onclick="IDclick()" onmousemove="IDmousout()">
+    </div>
+
+    <div>
+        <input id="psw" type="password" placeholder="密码">
+    </div>
+    <div>
+        <input id="confirmPsw" type="password" placeholder="确认密码" onclick="PSWlick()" onmousemove="PSWmousout()">
+    </div>
+    <div>
+        <button onclick="register()">注册</button>
+    </div>
+    <div>
+        <a href="Login.html">已有账号？直接登录吧！</a>
+    </div>
+</div>
+</body>
+</html>

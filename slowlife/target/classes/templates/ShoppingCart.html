@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <style type="text/css">
+        .CommodityPicture{
+            display: inline-block;
+        }
+        .CommodityInfo{
+            display: inline-block;
+        }
+        .money{
+            display: inline-block;
+            width: 60%;
+            height: 100%;
+            background-color: white;
+        }
+        .settlement{
+            display: inline-block;
+            width: 20%;
+            height: 100%;
+            background-color: red;
+        }
+        .shoopingcart{
+            width: 100%;
+            height: 400px;
+        }
+        .input_quantity{
+            width: 20px;
+        }
+        .lower{
+            height:50px;
+            width: 80%;
+        }
+
+
+        .navigation{
+            width: 100%;
+            height: 15%;
+            background-color: yellow;
+        }
+        .menu{
+            display: inline-block;
+            height: 100%;
+            width: 33%
+        }
+
+    </style>
+
+        <script src="jQuery/jquery-3.3.1.min.js"></script>
+
+        <script src="js/ShoppingCart.js"></script>
+
+
+</head>
+<body>
+    <!-- 购物车内的商品显示 -->
+    <div class="shoopingcart">
+        <span>购物车</span>
+        <hr size="3">
+        <div id="show"><!-- 总商品显示区 -->
+
+            <div><!-- 单个商品显示块 -->
+                <span style="display: inline-block;">
+                        <input type="checkbox" id="11checkbox" number="11" onclick="checkboxPoint(11)">
+                </span>
+                <span class="CommodityPicture"><!-- 商品展示图片 -->
+                        <a href="Commodityinfo.html?number=11"><img alt="商品图片11" src=""></a>
+                </span>
+                <div class="CommodityInfo"><!-- 商品信息及购买数量显示区 -->
+                    <span><a href="Commodityinfo.html?number=11">商品名称11</a></span><br>
+                    <span id="11price">1314</span>
+                    <span>
+                            <a id="11jian" onclick="Jian(11);">-</a>
+                            <input type="text" class="input_quantity" id="11" value="1">
+                            <a onclick="Jia(11);">+</a>
+                        </span>
+                </div>
+                <hr size="3">
+            </div>
+
+            <div><!-- 单个商品显示块 -->
+                <span style="display: inline-block;">
+                        <input type="checkbox" id="2checkbox" number="2" onclick="checkboxPoint(2)">
+                    </span>
+                <span class="CommodityPicture"><!-- 商品展示图片 -->
+                        <a href="Commodityinfo.html?number=2"><img alt="商品图片2" src=""></a>
+                </span>
+                <div class="CommodityInfo"><!-- 商品信息及购买数量显示区 -->
+                    <span><a href="Commodityinfo.html?number=2">商品名称2</a> </span><br>
+                    <span id="2price">520</span>
+                    <span>
+                            <a id="2jian" onclick="Jian(2);">-</a>
+                            <input type="text" class="input_quantity" id="2" value="1">
+                            <a onclick="Jia(2);">+</a>
+                        </span>
+                </div>
+                <hr size="3">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="lower">
+        <div class="money">
+            <span>总计：￥</span>
+            <span id="amount">0</span>
+        </div>
+        <div id="settlement" class="settlement" onclick="jiesuan()">
+            <span style="display: inline-block;">结算（</span>
+            <span id="quantity" style="display: inline-block;">0</span>
+            <span style="display: inline-block;">)</span>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!-- 导航栏所处区域 ,本文件唯一需要设计css的地方-->
+    <div class="navigation">
+            <span class="menu">
+                <a href="First.html"><img alt="首页" src=""> </a>
+            </span>
+        <span class="menu">
+                <a href="ShoppingCart.html"> <img alt="购物车" src="" > </a>
+            </span>
+        <span class="menu">
+                <a href="Person.html"> <img alt="个人主页" src=""> </a>
+            </span>
+    </div>
+
+</body>
+
+</html>

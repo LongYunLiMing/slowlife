@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品发布</title>
+    <script src="jQuery/jquery-3.3.1.min.js"></script>
+    <script src="js/CommodityRelease.js"></script>
+</head>
+<body>
+<div>
+    <!--商家信息-->
+    <div>
+        <a href="">
+            <span><img src="" alt="商家图片"></span>
+            <span>商家名称</span>
+        </a>
+    </div>
+
+</div>
+<div style="text-align: center">
+    <!--头部菜单: 销量查询、员工管理、商品发布、订单处理、客服接待、商品管理、财务查询-->
+    <span class="line">
+        <a href="MerchentPerson.html">查询</a>
+    </span>
+    <span class="line">
+        <a href="EmployeeManagement.html">员工管理</a>
+    </span>
+    <span class="line">
+        <a href="CommodityRelease.html">商品发布</a>
+    </span>
+    <span class="line">
+        <a href="CommodityManagement.html">商品管理</a>
+    </span>
+    <span class="line">
+        <a href="OrderDealwith.html">订单处理</a>
+    </span>
+    <span class="line">
+        <a href="CustomerServiceReception.html">客服接待</a>
+    </span>
+    <span class="line">
+        <a href="FinancialManagement.html">财务管理</a>
+    </span>
+</div>
+<div>
+    <!--商品发布区-->
+    <div>
+        <!--商品基本信息发布-->
+        <div>
+            <input type="text" id="CommodityName" placeholder="商品名称">
+        </div>
+        <div>
+            <input type="text" id="CommodityPrice" placeholder="商品单价">
+        </div>
+        <div>
+            <input type="text" id="CommodityInventory" placeholder="商品库存">
+        </div>
+        <div>
+            <input type="file" id="CommodityPicture" placeholder="商品封面">
+        </div>
+        <div>
+            <button id="CommoditySubmit" onclick="upload()">立即发布</button>
+        </div>
+    </div>
+    <div>
+        <!--商品详情页面设置-->
+        <div>
+            <button onclick="WritDetailShow()">详细页面设计</button>
+        </div>
+        <div id="DetailShow" style="display: none">
+            <div id="Design">
+                <!--设计区-->
+
+            </div>
+            <div>
+                <!--工具区-->
+                <div>
+                    <!--文本工具区-->
+                    <div>
+                        <textarea id="text" rows="5" cols="100" placeholder="商品描述"></textarea>
+                    </div>
+                    <div>
+                        <span>
+                            <button id="jian" onclick="sizejian()">-</button>
+                            size:<input type="text" size="2px" id="textsize" value="20">
+                            <button id="jia" onclick="sizejia()">+</button>
+                        </span>
+                        <span>
+                            <button onclick="text()">插入一段文本</button>
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <!--图片工具区-->
+                    <div>
+                        <input type="file" id="picture">
+                    </div>
+                    <div>
+                        <span>
+                            <button onclick="picture()">插入一张图片</button>
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <!--减少一个节点-->
+                    <button onclick="deleteHtml()">取消一个节点</button>
+                </div>
+            </div>
+            <div>
+                <button onclick="submitDesign()">设计提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
